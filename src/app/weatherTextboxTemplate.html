@@ -1,14 +1,25 @@
-<div class="row">
-    <div class="col-lg-4"></div>
-    <div class="col-lg-4">
-        <div class="input-group" ng-controller="suggestionCtrl">
-            <input type="text" class="form-control" placeholder="Enter City" id="city" ng-model="result"
-                   ng-change="GetCities(result)"
-                   uib-typeahead="suggestion for suggestion in suggestionData | filter:$viewValue">
-            <span class="input-group-btn">
+<div ng-controller="suggestionCtrl">
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter City" id="city" ng-model="result"
+                       ng-change="GetCities(result)"
+                       uib-typeahead="suggestion for suggestion in suggestionData | filter:$viewValue">
+                <span class="input-group-btn">
                         <button class="btn btn-default" type="button" ng-click="onClick(result)">Get Weather!</button>
                     </span>
+            </div>
         </div>
+        <div class="col-lg-4"></div>
+
     </div>
-    <div class="col-lg-4"></div>
+    <div class="container" hidden>
+            <div class="jumbotron">
+            </div>
+
+            <div id="forecast" class="row">
+            </div>
+    </div>
 </div>
+

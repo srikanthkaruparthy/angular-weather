@@ -7,5 +7,7 @@ function weatherTextboxDir() {
             suggestionData: '@'
         },
         templateUrl: "src/app/weatherTextboxTemplate.html"
+
     }
+
 }
