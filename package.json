@@ -1,0 +1,33 @@
+{
+  "name": "angular-weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "angular-sanitize": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular": "^1.5.8",
+    "angular-ui-bootstrap": "^2.2.0",
+    "angular-weather": "^0.0.2",
+    "bootstrap": "^3.3.7",
+    "lodash": "^4.16.4",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srikanthkaruparthy/angular-weather.git"
+  },
+  "author": "Sri Kanth Karuparthy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/srikanthkaruparthy/angular-weather/issues"
+  },
+  "homepage": "https://github.com/srikanthkaruparthy/angular-weather#readme"
+}
