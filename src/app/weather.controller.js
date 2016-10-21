@@ -14,12 +14,12 @@ function suggestionCtrlFn($scope, $http, limitToFilter) {
     };
     $scope.onClick = function (value) {
         $http.get('https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + value + '")&format=json').then(function (response) {
-            console.log(response.data.query.results);
             if (response.data.query.results === null) {
-                alert("Location not found: " + value + "!");
+                $scope.locationUnavailable = '<h2>Location Unavailable</h2>';
+                $('.jumbotron').html($scope.locationUnavailable);
+                $('.container').show();
             }
             else {
-                console.log(response.data.query.results.channel.item.title, response.data.query.results.channel.item.description);
                 $scope.myHeader = '<h2>' + response.data.query.results.channel.item.title + '</h2>';
                 $scope.myBody = '<p>' + response.data.query.results.channel.item.description + '</p>';
                 $('.jumbotron').html($scope.myHeader + $scope.myBody);
