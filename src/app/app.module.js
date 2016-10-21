@@ -1,2 +1,2 @@
 angular
-    .module('app', ['ui.bootstrap','ngSanitize']);
+    .module('app', ['ui.bootstrap']);

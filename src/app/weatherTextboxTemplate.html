@@ -1,25 +1,27 @@
-<div ng-controller="suggestionCtrl">
-    <div class="row">
-        <div class="col-lg-4"></div>
-        <div class="col-lg-4">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Enter City" id="city" ng-model="result"
-                       ng-change="GetCities(result)"
-                       uib-typeahead="suggestion for suggestion in suggestionData | filter:$viewValue">
-                <span class="input-group-btn">
-                        <button class="btn btn-default" type="button" ng-click="onClick(result)">Get Weather!</button>
-                    </span>
-            </div>
+<nav class="navbar navbar-default" ng-controller="suggestionCtrl">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Angular Weather</a>
         </div>
-        <div class="col-lg-4"></div>
 
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input id="city" type="text" class="form-control" placeholder="Enter City" ng-model="result"
+                           ng-change="GetCities(result)"
+                           uib-typeahead="suggestion for suggestion in suggestionData | filter:$viewValue">
+                </div>
+                <button type="button" class="btn btn-default" ng-click="onClick(result)">Get Forecast</button>
+            </form>
+        </div>
     </div>
-    <div class="container" hidden>
-            <div class="jumbotron">
-            </div>
+</nav>
 
-            <div id="forecast" class="row">
-            </div>
-    </div>
-</div>
 
